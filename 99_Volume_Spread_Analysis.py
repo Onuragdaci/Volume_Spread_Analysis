@@ -63,8 +63,8 @@ def Plot_Candle(Hisse,data):
 
 Hisseler=Hisse_Temel_Veriler()
 
-for i in range(0, len(Hisseler)):
-    print(Hisseler[i])
+for j in range(0, len(Hisseler)):
+    print(Hisseler[j])
     try:
         data = tv.get_hist(symbol=Hisseler[i],exchange='BIST',interval=Interval.in_1_hour,n_bars=1000)
         data.rename(columns = {'open':'Open', 'high':'High','low':'Low','close':'Close','volume':'Volume'}, inplace = True)
@@ -79,7 +79,7 @@ for i in range(0, len(Hisseler)):
         data = data.tail(45).copy()
         extreme_exists = (data['Extremes'] == 1).any()
         if extreme_exists==True:
-            Plot_Candle(Hisseler[i],data)
+            Plot_Candle(Hisseler[j],data)
     except:
         pass
 

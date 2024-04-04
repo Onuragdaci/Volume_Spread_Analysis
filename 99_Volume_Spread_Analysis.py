@@ -1,3 +1,8 @@
+!pip install git+https://github.com/baselsm/tvdatafeed
+!pip install scipy
+!pip install matplotlib
+!pip install mplcyberpunk
+!pip install mplfinance
 import pandas as pd
 import pandas_ta as ta
 import numpy as np
